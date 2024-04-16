@@ -3,7 +3,7 @@
 
 library(TAF)
 
-taf.bootstrap()
+taf.boot()
 sourceAll()
 cat("\n** Run completed\n")
 

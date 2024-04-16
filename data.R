@@ -1,6 +1,6 @@
 ## Preprocess data, write TAF data tables
 
-## Before: catch.csv, index.csv, priors.csv (bootstrap/data)
+## Before: catch.csv, index.csv, priors.csv (boot/data)
 ## After:  catch_by_stock.png, catch_index.csv, catch_relative.png,
 ##         catch_total.png, driors.pdf, input.rds (data)
 
@@ -14,7 +14,7 @@ library(tidyr)    # nest
 mkdir("data")
 
 ## Read catch data, convert to long format
-catch <- read.taf("bootstrap/data/catch.csv")
+catch <- read.taf("boot/data/catch.csv")
 catch$Total <- NULL  # not used, not a stock
 catch <- taf2long(catch, c("year", "stock", "capture"))
 
@@ -55,7 +55,7 @@ catch %>%
 ggsave("data/catch_relative.png", width=12, height=6)
 
 ## Read index data, combine catch and index data
-index <- read.taf("bootstrap/data/index.csv")
+index <- read.taf("boot/data/index.csv")
 index <- taf2long(index, c("year", "stock", "index"))
 catch_index <- addIndex(catch, index, same.index=FALSE)
 
@@ -66,7 +66,7 @@ stocks <- catch_index %>%
   ungroup()
 
 ## Read priors data, add as driors to stocks object
-priors <- read.taf("bootstrap/data/priors.csv")
+priors <- read.taf("boot/data/priors.csv")
 
 ## Custom function to add driors
 customDriors <- function(stocks, priors, same.priors)

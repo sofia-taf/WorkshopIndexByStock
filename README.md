@@ -7,7 +7,7 @@ SOFIA-TAF tutorials and for testing the VRE setup before workshops. The features
 of a Workshop demo is that it:
 
 * Is very light (<1 MB) and contains no results.
-* Includes a `script.R` that runs `taf.bootstrap()` and `sourceAll()`.
+* Includes a `script.R` that runs `taf.boot()` and `sourceAll()`.
 * Has a description label 'VRE demo' which makes them easy to find when
   searching on GitHub.
 
