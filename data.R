@@ -51,7 +51,7 @@ catch %>%
   group_by(stock) %>%
   mutate(capture = capture / max(capture)) %>%
   ggplot(aes(year, capture, group=stock)) +
-  geom_point()
+  geom_point(aes(color=stock))
 ggsave("data/catch_relative.png", width=12, height=6)
 
 ## Read index data, combine catch and index data
