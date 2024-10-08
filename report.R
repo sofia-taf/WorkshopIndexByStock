@@ -44,9 +44,9 @@ dev.off()
 ## Status summary: current analysis and last SOFIA
 taf.png("status_summary", width=1800, height=1000)
 par(mfrow=c(1,2))
-barplot(Proportion~Category, last_sofia, col=c(3,7,2), ylim=c(0,1),
+barplot(Proportion~Category, last_sofia, col=sofiaColors, ylim=c(0,1),
         xlab="Last SOFIA")
-barplot(prop.table(table(current_status$status)), col=c(3,7,2), ylim=c(0,1),
+barplot(prop.table(table(current_status$status)), col=sofiaColors, ylim=c(0,1),
         xlab="Current analysis", ylab="Proportion")
 dev.off()
 
