@@ -4,7 +4,7 @@
 library(TAF)
 
 taf.boot()
-sourceAll()
+source.all()
 cat("\n** Run completed\n")
 
 # Note that a variety of warnings and errors may be shown, but for the purposes

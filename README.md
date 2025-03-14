@@ -8,7 +8,7 @@ of a Workshop demo is that it:
 
 * Is very light (<1 MB) and the repository does not contain the results from the
   analysis.
-* Includes a `script.R` that runs `taf.boot()` and `sourceAll()`.
+* Includes a `script.R` that runs `taf.boot()` and `source.all()`.
 * Has a description label 'VRE demo' which makes them easy to find when
   searching on GitHub.
 
